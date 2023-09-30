@@ -46,10 +46,20 @@ export class EmployeeListComponent {
       this.sortBy = property;
       this.sortDirection = 1;
     }
+
+
     this.employees = this.employees.sort((a, b) => {
-      const aValue = a[property];
-      const bValue = b[property];
-      return this.sortDirection * aValue.localeCompare(bValue);
+      if (property === "status") {
+
+        const aValue = a[property];
+        const bValue = b[property];
+
+        return this.sortDirection * aValue.localeCompare(bValue);
+      }
+      const aValue = parseFloat(a[property].replace(/[^0-9.-]+/g, ''));
+      const bValue = parseFloat(b[property].replace(/[^0-9.-]+/g, ''));
+
+      return this.sortDirection * (aValue - bValue);
     });
   }
 

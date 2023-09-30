@@ -23,7 +23,7 @@ export class EmployeeService {
         birthDate: new Date(1980 + i, 0, 1), // Dummy birth date
         basicSalary: 50000 + Math.random() * 50000, // Dummy basic salary
         status: i % 2 === 0 ? 'Active' : 'Inactive', // Alternate status
-        group: i % 2 === 0 ? 'Group A' : 'Group B', // Alternate group
+        group: `Group ${Math.floor(Math.random() * 10) + 1}`,
         description: new Date(2023, 0, 1)
       };
       this.employees.push(employee);

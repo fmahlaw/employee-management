@@ -5,11 +5,13 @@ body {
 
 h2{
     text-align: center;
+    padding: 10px;
+    background-color: rgb(237, 235, 243);
 }
 /* Style for the search input fields */
 .search-input {
     padding: 8px;
-    margin: 5px 0;
+    margin: 5px 10px 0px 0px;  
     box-sizing: border-box;
     width: 20%;
 }
@@ -50,6 +52,7 @@ button {
 .add-employee-button {
     background-color:  rgb(255, 183, 0); /* Secondary/Accent color */
     color: white;
+    margin-left: 15px;
 }
 
 .add-employee-button:hover {
@@ -76,7 +79,6 @@ button {
 /* Style for the notification */
 .notification {
     padding: 10px;
-    margin-top: 10px;
 }
 
 .notification-yellow {
