@@ -1,0 +1,18 @@
+<div class="profile-wrapper">
+    <div *ngIf="employee" class="profile-container">
+        <h2>Employee Profile</h2>
+
+        <p>Username: {{ employee.username }}</p>
+        <p>First Name: {{ employee.firstName }}</p>
+        <p>Username: {{ employee.username }}</p>
+        <p>First Name: {{ employee.firstName }}</p>
+        <p>Last Name: {{ employee.lastName }}</p>
+        <p>Email: {{ employee.email }}</p>
+        <p>Birth Date: {{ employee.birthDate | date }}</p>
+        <!-- Add other employee details and format them accordingly -->
+
+        <p>Formatted Basic Salary: {{ formatBasicSalary(employee.basicSalary) }} </p>
+
+        <button (click)="navigateBack()">OK</button>
+    </div>
+</div>

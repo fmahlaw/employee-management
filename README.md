@@ -1,27 +1,69 @@
-# EmployeeManagement
+# Angular Employee Management App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+This Angular application allows you to manage employee data efficiently. It includes features like login authentication, displaying employee lists, adding/editing employees, and more.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Login Page**: Provides a login interface with hardcoded credentials (username: admin, password: admin).
+- **Employee List Page**: Displays a list of employees with options to view, edit, and delete employees.
+- **Add Employee Page**: Allows users to add new employees with required details.
+- **Edit Employee Page**: Enables users to edit existing employee information.
+- **Employee Profile Page**: Displays detailed information about a specific employee.
+- **Responsive Design**: Ensures the app looks great and functions well across various devices and screen sizes.
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+To run this application, you need the following software installed on your machine:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [Node.js and npm](https://nodejs.org/) (Node Package Manager)
+- [Angular CLI](https://angular.io/cli) (Command Line Interface for Angular)
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
+   ```bash
+   git clone https://github.com/your-username/employee-management.git
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+2. Navigate to the project directory:
+
+   ```bash
+   cd employee-management
+   ```
+
+3. Install the necessary dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+1. Start the Angular development server:
+
+   ```bash
+   ng serve
+   ```
+
+2. Open a web browser and navigate to `http://localhost:4200/` to access the application.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to create issues or submit pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify it as needed.

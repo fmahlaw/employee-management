@@ -1,0 +1,69 @@
+<!-- Display employee data in a table -->
+
+<input type="text" [(ngModel)]="searchUsername" placeholder="Search by Username..." class="search-input">
+
+<!-- Search input for first name -->
+<input type="text" [(ngModel)]="searchFirstName" placeholder="Search by First Name..." class="search-input">
+
+<label for="itemsPerPage">Items Per Page:</label>
+<select id="itemsPerPage" [(ngModel)]="selectedItemsPerPage" class="items-per-page-select">
+    <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }}</option>
+</select>
+<button routerLink="/edit" class="add-employee-button">Add Employee</button>
+<h2>Employee List</h2>
+<table class="employee-table">
+    <!-- Display table headers with sorting -->
+    <thead>
+        <tr>
+            <th (click)="sort('username')" class="sortable">Username</th>
+            <th (click)="sort('firstName')" class="sortable">First Name</th>
+            <th (click)="sort('lastName')" class="sortable">Last Name</th>
+            <th (click)="sort('email')" class="sortable">Email</th>
+            <th (click)="sort('birthDate')" class="sortable">Birth Date</th>
+            <th (click)="sort('basicSalary')" class="sortable">Basic Salary</th>
+            <th (click)="sort('status')" class="sortable">Status</th>
+            <th (click)="sort('group')" class="sortable">Group</th>
+            <th (click)="sort('description')" class="sortable">Description</th>
+            <th  class="sortable">Edit</th>
+            <th  class="sortable">Delete</th>
+            <th  class="sortable">Profile</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of filterEmployees()">
+            <td>{{ employee.username }}</td>
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.birthDate | date }}</td>
+            <td>{{ employee.basicSalary | currency:'Rp. ':'symbol':'1.2-2' }}</td>
+            <td>{{ employee.status }}</td>
+            <td>{{ employee.group }}</td>
+            <td>{{ employee.description | date }}</td>
+            <td>
+                <button (click)="editEmployee(employee)" class="edit-button">Edit</button>
+                
+            </td>
+            <td>
+                <button (click)="deleteEmployee(employee)" class="delete-button">Delete</button>
+            </td>
+
+            <td>
+                <button (click)="profileEmployee(employee)" class="profile-button">Profile</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Pagination controls -->
+<div class="pagination-controls">
+    <button [disabled]="currentPage === 1" (click)="currentPage = currentPage - 1" class="pagination-button">Previous</button>
+    <span>Page {{ currentPage }}</span>
+    <button [disabled]="(currentPage * selectedItemsPerPage) >= employees.length"
+        (click)="currentPage = currentPage + 1" class="pagination-button">Next</button>
+</div>
+
+<div *ngIf="notification" [ngClass]="{'notification-yellow': notification.type === 'edit', 'notification-red': notification.type === 'delete'}" class="notification">
+    {{ notification.message }}
+</div>

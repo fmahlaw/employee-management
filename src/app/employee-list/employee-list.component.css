@@ -1,0 +1,89 @@
+/* Add global styles if needed */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    text-align: center;
+}
+/* Style for the search input fields */
+.search-input {
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    width: 20%;
+}
+
+/* Style for the table */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Style for the table headers */
+thead th {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for the table rows */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style for the table data cells */
+
+
+/* Style for the buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Button colors and hover effects */
+.add-employee-button {
+    background-color:  rgb(255, 183, 0); /* Secondary/Accent color */
+    color: white;
+}
+
+.add-employee-button:hover {
+    background-color: #ffcc00; /* Brighter shade of accent color on hover */
+}
+
+.edit-button, .delete-button, .profile-button {
+    background-color: rgb(0, 61, 121); /* Your primary color */
+    color: white;
+}
+
+.edit-button:hover, .delete-button:hover, .profile-button:hover {
+    background-color: #0b4986; /* Brighter shade of primary color on hover */
+}
+
+/* Style for the pagination controls */
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style for the notification */
+.notification {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.notification-yellow {
+    background-color: yellow;
+}
+
+.notification-red {
+    background-color: red;
+    color: white;
+}
